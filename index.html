@@ -6,7 +6,7 @@
 <title>Atheris AI — HUNT THE FAKE</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Syncopate:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
 <style>
 /* =============================================
@@ -52,9 +52,9 @@
   --radius-xl: 24px;
   --radius-2xl: 32px;
 
-  --font-body: 'DM Sans', sans-serif;
-  --font-display: 'Playfair Display', serif;
-  --font-mono: 'DM Mono', monospace;
+  --font-body: 'Chakra Petch', sans-serif;
+  --font-display: 'Syncopate', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
 
   --transition: all 0.22s cubic-bezier(0.4,0,0.2,1);
   --transition-slow: all 0.4s cubic-bezier(0.4,0,0.2,1);
@@ -1379,38 +1379,350 @@ body {
 }
 
 @media (max-width: 480px) {
+  /* HERO */
   .hero {
-    padding: 48px 0 36px !important;
+    padding: 32px 0 24px !important;
+  }
+  .hero-title {
+    font-size: 1.5rem !important;
+    letter-spacing: -0.5px !important;
+  }
+  .hero-subtitle {
+    font-size: 0.85rem !important;
   }
   .hero-cta {
-    font-size: 0.9rem !important;
-    padding: 12px 22px !important;
+    font-size: 0.85rem !important;
+    padding: 12px 20px !important;
+  }
+  .hero-stats {
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    justify-content: center !important;
+  }
+  .hero-stat { min-width: 80px; }
+  .stat-divider { display: none !important; }
+  .hero-stat-val { font-size: 1.1rem !important; }
+  .hero-stat-label { font-size: 0.65rem !important; }
+
+  /* NAVBAR */
+  .navbar-inner {
+    height: 64px !important;
+    padding: 0 12px !important;
+  }
+  .logo img {
+    height: 48px !important;
+    width: 140px !important;
+  }
+  .nav-badges { display: none !important; }
+  .nav-actions {
+    gap: 4px !important;
   }
   .nav-actions .btn-ghost {
-    display: none !important;
+    font-size: 0.65rem !important;
+    padding: 5px 8px !important;
   }
-  .cards-grid {
-    grid-template-columns: 1fr !important;
+
+  /* SECURITY STRIP */
+  .security-strip {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    padding: 12px !important;
   }
-  .analytics-dashboard {
-    grid-template-columns: 1fr !important;
+  .security-divider { display: none !important; }
+  .security-badge {
+    font-size: 0.7rem !important;
+    justify-content: center !important;
+  }
+
+  /* MODE TABS */
+  .mode-tabs-wrap {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 6px !important;
+    padding: 6px !important;
   }
   .mode-tab {
     font-size: 0.65rem !important;
-    padding: 6px 8px !important;
+    padding: 8px 6px !important;
+    min-width: unset !important;
+    justify-content: center !important;
   }
   .mode-tab .tab-icon {
     display: inline !important;
     font-size: 0.8rem !important;
   }
+
+  /* UPLOAD ZONE */
+  .upload-zone {
+    padding: 28px 12px !important;
+  }
+  .upload-title { font-size: 0.88rem !important; }
+  .upload-subtitle { font-size: 0.72rem !important; }
+  .upload-icon {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  /* CARDS */
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .analysis-card { padding: 14px !important; }
+
+  /* RESULTS */
+  .result-hero {
+    grid-template-columns: 1fr !important;
+  }
+  .result-card.featured {
+    grid-column: span 1 !important;
+  }
+  .result-card { padding: 16px !important; }
+
+  /* EXPORT ROW */
+  .export-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+  .btn-export {
+    font-size: 0.68rem !important;
+    padding: 8px 8px !important;
+    justify-content: center !important;
+  }
+
+  /* ANALYTICS */
+  .analytics-dashboard {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+  }
+  .analytics-val { font-size: 1.4rem !important; }
+
+  /* NEURAL NETWORK */
+  .tl-neural-canvas {
+    height: 140px !important;
+  }
+  .tl-neural-title {
+    font-size: 0.95rem !important;
+  }
+  .tl-neural-subtitle {
+    font-size: 0.7rem !important;
+    padding: 0 12px !important;
+  }
+  .tl-neural-stats {
+    gap: 12px !important;
+  }
+  .tl-neural-stat-val {
+    font-size: 0.85rem !important;
+  }
+  .tl-neural-stat-label {
+    font-size: 0.55rem !important;
+  }
+
+  /* SHORTCUTS BAR */
+  .tl-shortcuts-bar {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    padding: 10px 12px !important;
+  }
+  .tl-shortcut {
+    font-size: 0.65rem !important;
+  }
+  .tl-kbd {
+    font-size: 0.58rem !important;
+    padding: 1px 4px !important;
+  }
+  .tl-shortcuts-bar > span:first-child {
+    grid-column: span 2 !important;
+  }
+  .tl-shortcuts-bar > div:last-child {
+    grid-column: span 2 !important;
+    text-align: center !important;
+    font-size: 0.6rem !important;
+  }
+
+  /* METRICS GRID */
   .tl-metrics-grid {
     grid-template-columns: 1fr !important;
+    gap: 10px !important;
   }
+  .tl-metric-value { font-size: 1.4rem !important; }
+
+  /* MODEL ATTRIBUTION */
   .tl-model-attr-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+  .tl-model-attr-icon { font-size: 1.2rem !important; }
+  .tl-model-attr-pct { font-size: 1.1rem !important; }
+  .tl-model-attr-name { font-size: 0.72rem !important; }
+
+  /* CHARTS */
+  .tl-charts-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .tl-chart-full {
+    grid-column: span 1 !important;
+  }
+  .tl-chart-canvas-wrap {
+    height: 180px !important;
+  }
+
+  /* HISTORY STATS */
+  .tl-history-stats {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 8px !important;
+  }
+  .tl-hist-stat-val { font-size: 1rem !important; }
+
+  /* TRUST LEVELS */
+  .tl-trust-levels {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+  }
+  .tl-trust-level-item {
+    font-size: 0.6rem !important;
+    padding: 6px !important;
+  }
+
+  /* EXPORT GRID */
+  .tl-export-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+  .tl-export-option { padding: 12px 8px !important; }
+  .tl-export-option-icon { font-size: 1.4rem !important; }
+  .tl-export-option-label { font-size: 0.7rem !important; }
+  .tl-export-option-desc { font-size: 0.58rem !important; }
+
+  /* MODE PILLS */
+  .tl-mode-pills {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px !important;
+  }
+  .tl-mode-pill {
+    font-size: 0.7rem !important;
+    padding: 7px 10px !important;
+    justify-content: center !important;
+  }
+
+  /* HUMANIZATION */
+  .tl-human-meter-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .tl-human-details { width: 100% !important; }
+
+  /* ADV SETTINGS */
+  .tl-adv-settings-grid {
     grid-template-columns: 1fr !important;
   }
-  .tl-history-stats {
+
+  /* TEXT BANDS */
+  .text-result-bands {
     grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* AUDIO GRID */
+  .audio-result-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* ENTERPRISE */
+  .enterprise-teaser {
+    padding: 24px 16px !important;
+  }
+  .enterprise-title { font-size: 1.1rem !important; }
+  .enterprise-features { gap: 6px !important; }
+  .ent-feature {
+    font-size: 0.65rem !important;
+    padding: 4px 8px !important;
+  }
+
+  /* API SECTION */
+  .api-code-block {
+    font-size: 0.65rem !important;
+    padding: 12px !important;
+    overflow-x: auto !important;
+  }
+  .api-section { padding: 20px 16px !important; }
+
+  /* BLOCKCHAIN */
+  .blockchain-chain {
+    flex-wrap: wrap !important;
+    gap: 4px !important;
+  }
+
+  /* FOOTER */
+  .footer-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  .footer-links {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+  .footer-link {
+    font-size: 0.7rem !important;
+    padding: 4px 8px !important;
+  }
+
+  /* CHAT */
+  .chat-helper-wrap {
+    width: calc(100vw - 24px) !important;
+    right: 12px !important;
+    bottom: 80px !important;
+  }
+
+  /* WRAPPER */
+  .wrapper {
+    padding: 0 12px !important;
+  }
+
+  /* BATCH */
+  .batch-item {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+  .batch-item-name { font-size: 0.72rem !important; }
+
+  /* COMPARISON */
+  .comp-arrow { display: none !important; }
+  .comparison-wrap {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* SETTINGS GRID */
+  .settings-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* PREVENT HORIZONTAL SCROLL — ALL DEVICES */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+* { box-sizing: border-box !important; }
+
+/* TOUCH TARGETS */
+@media (max-width: 768px) {
+  button, .btn-ghost, .btn-export, .mode-tab, .tl-mode-pill {
+    min-height: 40px !important;
+    touch-action: manipulation !important;
+  }
+  .result-hero {
+    grid-template-columns: 1fr !important;
+  }
+  .result-card.featured {
+    grid-column: span 1 !important;
   }
   .tl-charts-grid {
     grid-template-columns: 1fr !important;
@@ -1418,7 +1730,25 @@ body {
   .tl-chart-full {
     grid-column: span 1 !important;
   }
+  .comparison-wrap {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* TABLET FIXES */
+@media (max-width: 600px) {
+  .mode-tabs-wrap {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 6px !important;
+  }
   .tl-shortcuts-bar {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+  .export-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 8px !important;
   }
 }
@@ -1463,7 +1793,7 @@ body {
 <nav class="navbar" role="banner">
   <div class="navbar-inner">
     <a href="#" class="logo" aria-label="Atheris AI Home">
-      <img src="logo.png" alt="Atheris AI Logo" style="height:120px;width:280px;object-fit:contain;object-position:left center;filter:drop-shadow(0 0 10px rgba(0,201,167,0.6)) brightness(1.3);">
+      <img src="logo.png" alt="Atheris AI Logo" style="height:120px;width:280px;max-width:45vw;object-fit:contain;object-position:left center;filter:drop-shadow(0 0 10px rgba(0,201,167,0.6)) brightness(1.3);">
     </a>
     <div class="nav-badges">
       <span class="nav-badge"><span class="dot"></span> No Cloud Upload</span>
@@ -1740,8 +2070,8 @@ body {
                 <svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">
                   <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#0d2e2b" stroke-width="14" stroke-linecap="round"/>
                   <path id="confArcFill" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="url(#confGrad)" stroke-width="14" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251" style="transition:stroke-dashoffset 1.4s ease;"/>
-                  <text id="confNeedle" x="100" y="88" text-anchor="middle" font-family="Playfair Display,serif" font-size="28" font-weight="700" fill="#e0faf6">—</text>
-                  <text x="100" y="105" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="10" fill="#4a9e96">CONFIDENCE</text>
+                  <text id="confNeedle" x="100" y="88" text-anchor="middle" font-family="Syncopate,sans-serif" font-size="28" font-weight="700" fill="#e0faf6">—</text>
+                  <text x="100" y="105" text-anchor="middle" font-family="Chakra Petch,sans-serif" font-size="10" fill="#4a9e96">CONFIDENCE</text>
                 </svg>
               </div>
             </div>
@@ -2426,7 +2756,7 @@ body {
 <footer class="footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="logo.png" alt="Atheris AI Logo" style="height:36px;width:auto;object-fit:contain;">
+      <img src="logo.png" alt="Atheris AI Logo" style="height:36px;width:auto;max-width:120px;object-fit:contain;">
       <div>
         <div class="footer-brand-text">Atheris AI</div>
         <div class="footer-meta">AI Media Authentication Platform</div>
@@ -3502,13 +3832,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 </script>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Atheris AI — New Features Additions (Append Only)</title>
 <!--
   ================================================================
   Atheris AI — APPEND-ONLY FEATURE ADDITIONS
@@ -3528,7 +3851,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ================================================================
 -->
 <!-- PASTE THIS IN <head> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>>
+</head>
 
 <!--
   ================================================================
